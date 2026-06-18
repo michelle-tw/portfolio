@@ -39,6 +39,10 @@
   ::selection{background:var(--gold);color:#fff}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
 
+  /* prevent awkward orphan line-breaks */
+  h1,h2,h3,.sec-head p,.hero .role,.story-grid p.intro,.contact-big,.m-where,.v-cap,.lbl{text-wrap:balance}
+  p,.lead,.summary,.th-desc{text-wrap:pretty}
+
   /* NAV */
   header{position:sticky;top:0;z-index:50;background:rgba(250,248,244,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
@@ -339,11 +343,11 @@
         <div class="m-body">
           <div class="m-year">2019 — 2023</div>
           <h3 data-en>Where it began</h3><h3 data-zh>一切的開始</h3>
-          <div class="m-where" data-en>Bachelor of Economics · Tan Tao University, Vietnam</div>
-          <div class="m-where" data-zh>經濟學學士 · 越南 Tan Tao 大學</div>
-          <p data-en>I studied economics in a fully English-taught international program — and discovered I loved leading people. As Vice President of the Student Council and President of the Event Organization Club, I led 100+ peers to plan large-scale campus events.</p>
-          <p data-zh>我在全英語國際課程中修讀經濟學，也發現自己熱愛帶領團隊。擔任學生會副主席與活動社社長，帶領百人團隊籌辦大型校園活動。</p>
-          <div class="pills"><span class="pill" data-en>Economics</span><span class="pill" data-zh>經濟學</span><span class="pill" data-en>Leadership</span><span class="pill" data-zh>領導力</span><span class="pill" data-en>Event Planning</span><span class="pill" data-zh>活動企劃</span></div>
+          <div class="m-where" data-en>Bachelor of International Business · Tan Tao University, Vietnam</div>
+          <div class="m-where" data-zh>國際企業學士 · 越南 Tan Tao 大學</div>
+          <p data-en>I studied international business in a fully English-taught program — and discovered I loved leading people. As Vice President of the Student Council and President of the Event Organization Club, I led 100+ peers to plan large-scale campus events.</p>
+          <p data-zh>我在全英語國際課程中主修國際企業，也發現自己熱愛帶領團隊。擔任學生會副主席與活動社社長，帶領百人團隊籌辦大型校園活動。</p>
+          <div class="pills"><span class="pill" data-en>International Business</span><span class="pill" data-zh>國際企業</span><span class="pill" data-en>Leadership</span><span class="pill" data-zh>領導力</span><span class="pill" data-en>Event Planning</span><span class="pill" data-zh>活動企劃</span></div>
         </div>
       </div>
 
@@ -515,7 +519,7 @@
         </div>
         <div class="edu-item">
           <span class="yr">2019 – 2023</span>
-          <div class="deg" data-en>Bachelor, Economics</div><div class="deg" data-zh>經濟學學士</div>
+          <div class="deg" data-en>Bachelor, International Business</div><div class="deg" data-zh>國際企業學士</div>
           <div class="sch" data-en>Tan Tao University, Vietnam</div><div class="sch" data-zh>Tan Tao University（越南）</div>
           <div class="gpa">GPA 3.82 / 4.00</div>
         </div>
