@@ -148,6 +148,18 @@
   .thesis .th-sub{font-size:.78rem;color:var(--gold);letter-spacing:.03em;margin:5px 0 10px}
   .thesis .th-desc{font-size:.9rem;color:var(--ink-soft);margin-bottom:13px;line-height:1.6}
 
+  /* PRESS */
+  .press{margin-top:38px}
+  .press h5{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:10px;color:var(--ink)}
+  .press h5::before{content:"";width:24px;height:1px;background:var(--gold)}
+  .press-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .press-card{display:block;background:var(--white);border:1px solid var(--line);border-radius:10px;padding:24px 26px;transition:border-color .25s,box-shadow .3s,transform .25s}
+  .press-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 24px 48px -30px rgba(70,55,20,.4)}
+  .press-card .src{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .press-card .src .arr{font-size:.95rem}
+  .press-card .ph{font-family:var(--serif);font-size:1.16rem;font-weight:600;line-height:1.32;margin-top:9px;color:var(--ink)}
+  .press-card .pd{font-size:.86rem;color:var(--ink-soft);margin-top:7px}
+
   /* VIDEOS */
   .video-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
   .video-card{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:14px;transition:border-color .3s,box-shadow .3s}
@@ -176,7 +188,7 @@
   @media(max-width:860px){
     .hero-grid{grid-template-columns:1fr;gap:42px}
     .portrait{max-width:300px;order:-1}
-    .story-grid,.exp-grid,.video-grid{grid-template-columns:1fr;gap:30px}
+    .story-grid,.exp-grid,.video-grid,.press-grid{grid-template-columns:1fr;gap:30px}
     .milestone{grid-template-columns:1fr;gap:26px;padding:40px 0}
     .milestone .m-visual{order:-1 !important}
     .stats{grid-template-columns:1fr 1fr}
@@ -303,13 +315,7 @@
 
       <!-- 1 Foundation -->
       <div class="milestone">
-        <div class="m-visual">
-          <div class="m-panel">
-            <div class="rn">Ⅰ</div>
-            <div class="pk" data-en>The Foundation</div><div class="pk" data-zh>起點</div>
-            <div class="pk2" data-en>Vietnam</div><div class="pk2" data-zh>越南</div>
-          </div>
-        </div>
+        <div class="m-visual"><img class="m-photo" src="vietnam.jpg" alt="Michelle Tran graduation — Tan Tao University" loading="lazy" style="object-position:center 28%" /></div>
         <div class="m-body">
           <div class="m-year">2019 — 2023</div>
           <h3 data-en>Where it began</h3><h3 data-zh>一切的開始</h3>
@@ -491,6 +497,26 @@
           <div class="cert"><b>Financial Markets</b><span>Yale</span></div>
           <div class="cert"><b>Brand Management</b><span>Univ. of London</span></div>
         </div>
+      </div>
+    </div>
+
+    <div class="press">
+      <h5 data-en>Featured In</h5><h5 data-zh>媒體報導</h5>
+      <div class="press-grid">
+        <a class="press-card" href="https://kenh14.vn/nu-sinh-long-an-dat-diem-toeic-khung-chi-trong-27-ngay-on-luyen-20221229112422131.chn" target="_blank" rel="noopener">
+          <div class="src"><span>Kenh14 · 2022</span><span class="arr">↗</span></div>
+          <div class="ph" data-en>"Long An student scores a remarkable TOEIC 915 — in just 27 days"</div>
+          <div class="ph" data-zh>「長安女生 27 天考出多益 915 分」</div>
+          <div class="pd" data-en>National youth media — on raising her TOEIC from 680 to 915 in one month.</div>
+          <div class="pd" data-zh>全國青年媒體報導 —— 一個月內將多益從 680 提升至 915。</div>
+        </a>
+        <a class="press-card" href="https://ttu.edu.vn/thanh-cong-cua-cuu-sinh-vien-khoa-kinh-te-quan-tri-kinh-doanh-dai-hoc-tan-tao/" target="_blank" rel="noopener">
+          <div class="src"><span>Tan Tao University · 2024</span><span class="arr">↗</span></div>
+          <div class="ph" data-en>Featured alumna — School of Economics &amp; Business</div>
+          <div class="ph" data-zh>經濟與管理學院 —— 傑出校友專訪</div>
+          <div class="pd" data-en>Profiled by her faculty as a role-model graduate and former Event Club president.</div>
+          <div class="pd" data-zh>學院專文報導：傑出畢業生、活動社前社長。</div>
+        </a>
       </div>
     </div>
   </div>
