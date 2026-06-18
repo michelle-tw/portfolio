@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  @page{size:A4;margin:0}
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--ink:#1c1b19;--soft:#55514b;--gold:#b08d4f;--line:#e3dccf;--cream:#f7f4ee}
+  body{font-family:'Inter',sans-serif;color:var(--ink);font-weight:300;line-height:1.5;
+    width:210mm;min-height:297mm;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .serif{font-family:'Cormorant Garamond',serif}
+
+  .head{padding:4mm 14mm 3mm;border-bottom:1px solid var(--line);position:relative}
+  .head .eyebrow{font-size:8pt;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:4px}
+  .head h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27pt;line-height:.95;letter-spacing:.4px}
+  .head h1 .zh{font-size:.45em;color:var(--soft);letter-spacing:4px;margin-left:14px}
+  .head .role{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11.5pt;color:var(--soft);margin-top:4px}
+  .contact{display:flex;flex-wrap:wrap;gap:2px 14px;margin-top:6px;font-size:8.3pt;color:var(--soft)}
+  .contact span b{color:var(--gold);font-weight:600;margin-right:4px}
+
+  .body{display:grid;grid-template-columns:60mm 1fr;align-items:stretch}
+  .side{background:var(--cream);padding:5mm 8mm 4mm 14mm}
+  .main{padding:5mm 14mm 4mm 8mm}
+
+  h2{font-family:'Inter',sans-serif;font-size:8.2pt;letter-spacing:2.2px;text-transform:uppercase;font-weight:600;
+    color:var(--ink);margin:0 0 5px;display:flex;align-items:center;gap:8px}
+  h2::before{content:"";width:15px;height:1.5px;background:var(--gold);flex:none}
+  .blk{margin-bottom:3mm}
+  .side .blk{margin-bottom:2.4mm}
+
+  .summary{font-size:8.7pt;color:var(--soft);line-height:1.45}
+  .summary strong{color:var(--ink);font-weight:500}
+
+  .job{margin-bottom:3.2mm}
+  .job:last-child{margin-bottom:0}
+  .job .t{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .job .role-n{font-size:9.6pt;font-weight:600;color:var(--ink)}
+  .job .yr{font-size:7.8pt;color:var(--gold);font-weight:500;white-space:nowrap;letter-spacing:.3px}
+  .job .org{font-size:8.5pt;color:var(--soft);font-style:italic;margin-bottom:2px}
+  .job p{font-size:8.3pt;color:var(--soft);line-height:1.4}
+  .job p strong{color:var(--ink);font-weight:500}
+
+  .award{font-size:8.4pt;color:var(--soft);padding:1.6px 0;line-height:1.38}
+  .award b{color:var(--ink);font-weight:600}
+
+  .edu{margin-bottom:3mm}
+  .edu .d{font-size:9.4pt;font-weight:600;line-height:1.15}
+  .edu .s{font-size:8.4pt;color:var(--soft);line-height:1.3}
+  .edu .m{font-size:8pt;color:var(--gold);font-weight:500;margin-top:1px}
+  .edu .th{font-size:7.8pt;color:var(--soft);font-style:italic;margin-top:2px;line-height:1.3}
+
+  .lang{margin-bottom:4px}
+  .lang .lt{display:flex;justify-content:space-between;font-size:8.6pt;margin-bottom:3px}
+  .lang .lt em{font-style:normal;color:var(--soft);font-size:7.6pt}
+  .lbar{height:3px;background:#e8e1d4;border-radius:9px;overflow:hidden}
+  .lbar span{display:block;height:100%;background:linear-gradient(90deg,#c9a96a,#b08d4f)}
+
+  .tags{display:flex;flex-wrap:wrap;gap:3px}
+  .tag{font-size:7.5pt;padding:2px 7px;border:1px solid var(--line);border-radius:99px;color:var(--soft);background:#fff}
+  .side .tag{background:#fff}
+  .sublabel{font-size:7pt;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold);font-weight:600;margin:6px 0 4px}
+
+  .cert{font-size:8.2pt;color:var(--soft);padding:1.4px 0;display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line)}
+  .cert:last-child{border-bottom:none}
+  .cert b{color:var(--ink);font-weight:500}
+  .cert span{color:var(--gold);font-size:7.6pt;white-space:nowrap}
+</style>
+</head>
+<body>
+  <div class="head">
+    <div class="eyebrow">International Marketing · Consumer Insight · Brand Strategy</div>
+    <h1>Michelle Tran<span class="zh">陳氏清花</span></h1>
+    <div class="role">Turning consumer and market insight into brands that grow.</div>
+    <div class="contact">
+      <span><b>✉</b>thanhhoa.tran10062001@gmail.com</span>
+      <span><b>☎</b>0925 392 069</span>
+      <span><b>in</b>linkedin.com/in/hoa-tranthithanh</span>
+      <span><b>⌥</b>github.com/michelle-tw</span>
+      <span><b>◍</b>Tainan, Taiwan</span>
+    </div>
+  </div>
+
+  <div class="body">
+    <!-- SIDEBAR -->
+    <div class="side">
+      <div class="blk">
+        <h2>Education</h2>
+        <div class="edu">
+          <div class="d serif">Master, International MBA</div>
+          <div class="s">National Cheng Kung University, Taiwan · 2024–2026</div>
+          <div class="m">GPA 4.25 / 4.30 · Top 10% Outstanding</div>
+          <div class="th">Thesis — Impact Investing Across Borders: ESG &amp; Investor Behavior (177,491 transactions, OLS)</div>
+        </div>
+        <div class="edu">
+          <div class="d serif">Bachelor, Economics</div>
+          <div class="s">Tan Tao University, Vietnam · 2019–2023</div>
+          <div class="m">GPA 3.82 / 4.00</div>
+        </div>
+      </div>
+
+      <div class="blk">
+        <h2>Languages</h2>
+        <div class="lang"><div class="lt"><span>Vietnamese</span><em>Native</em></div><div class="lbar"><span style="width:100%"></span></div></div>
+        <div class="lang"><div class="lt"><span>English</span><em>TOEIC 915</em></div><div class="lbar"><span style="width:92%"></span></div></div>
+        <div class="lang"><div class="lt"><span>Mandarin · Listening</span><em>TOCFL B2</em></div><div class="lbar"><span style="width:80%"></span></div></div>
+        <div class="lang"><div class="lt"><span>Mandarin · Reading</span><em>TOCFL A2</em></div><div class="lbar"><span style="width:45%"></span></div></div>
+      </div>
+
+      <div class="blk">
+        <h2>Core Skills</h2>
+        <div class="tags">
+          <span class="tag">Market Research</span><span class="tag">Consumer Insight</span>
+          <span class="tag">Brand Strategy</span><span class="tag">Go-to-Market</span>
+          <span class="tag">Competitive Analysis</span><span class="tag">Business Development</span>
+          <span class="tag">Pitching</span><span class="tag">Cross-Cultural Comms</span>
+        </div>
+        <div class="sublabel">AI Superpower</div>
+        <div class="tags">
+          <span class="tag">Prompt Engineering</span><span class="tag">Claude · Gemini</span>
+          <span class="tag">AI Prototyping</span><span class="tag">Automation</span>
+        </div>
+      </div>
+
+      <div class="blk">
+        <h2>Certifications</h2>
+        <div class="cert"><b>TOEIC</b><span>915 · ETS</span></div>
+        <div class="cert"><b>TOCFL (中文檢定)</b><span>Listening B2</span></div>
+        <div class="cert"><b>Data Analytics</b><span>IBM</span></div>
+        <div class="cert"><b>Financial Markets</b><span>Yale</span></div>
+        <div class="cert"><b>Brand Management</b><span>U. of London</span></div>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+      <div class="blk">
+        <h2>Profile</h2>
+        <p class="summary">Trilingual marketer (Vietnamese · English · Mandarin) and <strong>NCKU IMBA</strong> graduate. From competitor and consumer research to global brand competitions — <strong>L'Oréal Brandstorm</strong> and <strong>Hult Prize</strong> — I turn insight into commercial strategy. My edge: a natural bridge between <strong>Southeast Asia and international markets</strong>, sharpened by fluency with AI.</p>
+      </div>
+
+      <div class="blk">
+        <h2>Experience</h2>
+        <div class="job">
+          <div class="t"><span class="role-n">Market Research &amp; Product Specialist</span><span class="yr">2025 — Present</span></div>
+          <div class="org">Chenyang Info · Vietnam ⇆ Taiwan</div>
+          <p>Own Vietnam market-entry and deep <strong>consumer research</strong> — turning insight into product features with R&amp;D, building the lead pipeline, and sharpening competitive <strong>pricing &amp; positioning</strong>.</p>
+        </div>
+        <div class="job">
+          <div class="t"><span class="role-n">Digital Product &amp; Automation</span><span class="yr">2026 — Present</span></div>
+          <div class="org">ProTrack &amp; HeyMimi · Self-initiated</div>
+          <p>Saw a manufacturer drowning in paper-and-Excel and <strong>built the fix myself</strong> — a bilingual (中/越) project &amp; time-management system. As a marketer <strong>fluent in generative AI</strong>, I prototype and ship real tools instead of waiting on a dev team.</p>
+        </div>
+        <div class="job">
+          <div class="t"><span class="role-n">Founder &amp; CEO — Bio Beauty</span><span class="yr">2024 — 2025</span></div>
+          <div class="org">Hult Prize · B-Corp biotech haircare brand</div>
+          <p>Founded a kombucha-based sustainable haircare brand on the UN SDGs. Led <strong>market research, business modeling and investor pitching</strong> — <strong>3rd</strong> at NCKU campus round, <strong>Top 19</strong> nationally.</p>
+        </div>
+        <div class="job">
+          <div class="t"><span class="role-n">Business Analyst Intern</span><span class="yr">2022</span></div>
+          <div class="org">TMA Solutions · Healthcare App</div>
+          <p>Analyzed <strong>10+ competitors</strong> and <strong>100+ customer insights</strong> to optimize UX/UI; reported 30+ bugs and proposed 5+ new features — turning market research into product decisions.</p>
+        </div>
+      </div>
+
+      <div class="blk">
+        <h2>Recognition</h2>
+        <div class="award"><b>L'Oréal Brandstorm 2026</b> — NCKU representative among <b>152 teams</b>; Biotech Fragrance concept pitched to industry judges.</div>
+        <div class="award"><b>Hult Prize 2025</b> — Top 19 nationally among Taiwan's best student startups.</div>
+        <div class="award"><b>NCKU IMBA</b> — Top 10% Outstanding Student (94.5 / 100); perfect score in Entrepreneurship.</div>
+        <div class="award"><b>Leadership</b> — Vice President, Student Council &amp; President, Event Club (led 100+ peers).</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
