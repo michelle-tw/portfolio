@@ -130,7 +130,7 @@
   .m-links a svg{width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:1.7}
 
   /* EXPERTISE */
-  .exp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;align-items:start}
+  .exp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;align-items:stretch}
   .exp-card{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:32px}
   .exp-card h5{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:10px}
   .exp-card h5::before{content:"";width:24px;height:1px;background:var(--gold)}
@@ -207,6 +207,10 @@
   [data-zh]{display:none}
   html[lang="zh"] [data-en]{display:none}
   html[lang="zh"] [data-zh]{display:revert}
+  /* fix: card h5 headings use display:flex which out-specifies the toggle — hide off-language heading explicitly */
+  .exp-card h5[data-zh],.lang-card h5[data-zh],.press h5[data-zh]{display:none}
+  html[lang="zh"] .exp-card h5[data-en],html[lang="zh"] .lang-card h5[data-en],html[lang="zh"] .press h5[data-en]{display:none}
+  html[lang="zh"] .exp-card h5[data-zh],html[lang="zh"] .lang-card h5[data-zh],html[lang="zh"] .press h5[data-zh]{display:flex}
   html[lang="zh"]{font-feature-settings:"palt"}
 
   @media(max-width:860px){
@@ -472,16 +476,13 @@
     </div>
     <div class="exp-grid">
       <div class="exp-card">
-        <h5 data-en>Marketing &amp; Strategy</h5><h5 data-zh>行銷與策略</h5>
+        <h5 data-en>Marketing &amp; Growth</h5><h5 data-zh>行銷與成長</h5>
         <div class="pills">
           <span class="pill">Market Research</span><span class="pill">Consumer Insight</span>
           <span class="pill">Brand Strategy</span><span class="pill">Marketing &amp; Sales</span>
           <span class="pill">Go-to-Market</span><span class="pill">Competitive Analysis</span>
           <span class="pill">Business Development</span><span class="pill">Pitching</span>
           <span class="pill">Cross-Cultural Comms</span>
-        </div>
-        <h5 style="margin-top:28px" data-en>Digital Marketing</h5><h5 style="margin-top:28px" data-zh>數位行銷</h5>
-        <div class="pills">
           <span class="pill">SEO</span><span class="pill">SEM</span><span class="pill">Google Analytics</span>
           <span class="pill">Social Media Marketing</span><span class="pill">Meta · FB · IG Ads</span>
           <span class="pill">Content Marketing</span><span class="pill">Copywriting</span>
@@ -496,7 +497,7 @@
         </div>
         <h5 style="margin-top:28px" data-en>Tools</h5><h5 style="margin-top:28px" data-zh>工具</h5>
         <div class="pills">
-          <span class="pill">Excel</span><span class="pill">PowerPoint</span><span class="pill">Stata</span>
+          <span class="pill">Word</span><span class="pill">Excel</span><span class="pill">PowerPoint</span><span class="pill">Stata</span>
         </div>
       </div>
       <div class="exp-card">
