@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Michelle Tran — Business Development & Market Research</title>
+<meta name="description" content="Portfolio of Michelle Tran (陳氏清花) — trilingual Business Development & Market Research professional bridging Vietnam and international markets. NCKU IMBA." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#faf8f4; --bg-alt:#f3efe7; --ink:#1c1b19; --ink-soft:#55514b;
+    --line:#e3dccf; --gold:#b08d4f; --gold-soft:#c9a96a; --white:#ffffff;
+    --dark:#2a2722;
+    --serif:'Cormorant Garamond', Georgia, serif;
+    --sans:'Inter','Noto Sans TC',-apple-system,BlinkMacSystemFont,sans-serif;
+    --max:1120px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased}
+  html[lang="zh"] body{line-height:1.85}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--gold);color:#fff}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:50;background:rgba(250,248,244,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{font-family:var(--serif);font-size:1.45rem;font-weight:600;letter-spacing:.5px}
+  .brand .dot{color:var(--gold)}
+  .nav-links{display:flex;align-items:center;gap:32px}
+  .nav-links a{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:400;position:relative;transition:color .25s}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:width .3s}
+  .nav-links a:hover::after{width:100%}
+  .lang-toggle{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:.72rem;letter-spacing:.1em}
+  .lang-toggle button{background:none;border:none;cursor:pointer;padding:7px 13px;font-family:var(--sans);color:var(--ink-soft);transition:.2s;font-weight:500}
+  .lang-toggle button.active{background:var(--ink);color:#fff}
+  .menu-btn{display:none;background:none;border:none;cursor:pointer;font-size:1.5rem;color:var(--ink)}
+
+  /* HERO */
+  .hero{padding:90px 0 76px;border-bottom:1px solid var(--line)}
+  .hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:60px;align-items:center}
+  .eyebrow{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:22px}
+  .hero h1{font-family:var(--serif);font-weight:500;line-height:1.04;font-size:clamp(2.8rem,6vw,4.6rem);letter-spacing:.5px;margin-bottom:6px}
+  .hero h1 .zh-name{display:block;font-size:.5em;color:var(--ink-soft);margin-top:10px;letter-spacing:5px}
+  .hero .role{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,2.4vw,1.65rem);color:var(--ink-soft);margin:16px 0 24px}
+  .hero p.lead{max-width:33em;color:var(--ink-soft);font-size:1.02rem}
+  .hero-cta{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:999px;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;transition:.25s;cursor:pointer}
+  .btn-primary{background:var(--ink);color:#fff;border:1px solid var(--ink)}
+  .btn-primary:hover{background:var(--gold);border-color:var(--gold)}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .portrait{position:relative;aspect-ratio:3/4;border-radius:6px;overflow:hidden;background:linear-gradient(150deg,#ece4d4,#d8cbb2);display:flex;align-items:center;justify-content:center;box-shadow:0 30px 60px -30px rgba(80,60,20,.45)}
+  .portrait-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%}
+  .portrait .initials{font-family:var(--serif);font-size:5rem;color:var(--gold);opacity:.65}
+  .portrait::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.45);margin:14px;border-radius:3px;pointer-events:none}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:60px;border-radius:6px;overflow:hidden}
+  .stat{background:var(--bg);padding:26px 18px;text-align:center}
+  .stat .num{font-family:var(--serif);font-size:2.2rem;color:var(--gold);line-height:1;font-weight:600}
+  .stat .lbl{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px}
+
+  /* SECTION */
+  section{padding:92px 0}
+  .alt{background:var(--bg-alt)}
+  .sec-head{margin-bottom:50px;max-width:48em}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-num{font-family:var(--serif);font-size:.95rem;color:var(--gold);letter-spacing:.2em;display:block;margin-bottom:12px}
+  .sec-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4vw,2.9rem);letter-spacing:.5px;line-height:1.1}
+  .sec-head p{color:var(--ink-soft);margin-top:16px;font-size:1.02rem}
+
+  /* STORY */
+  .story-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:60px}
+  .story-grid p{color:var(--ink-soft);margin-bottom:18px;font-size:1.05rem}
+  .story-grid p.intro{font-family:var(--serif);font-style:italic;font-size:1.5rem;line-height:1.4;color:var(--ink);margin-bottom:26px}
+  .story-grid p strong{color:var(--ink);font-weight:500}
+  .lang-card{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:30px}
+  .lang-card h5{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:22px;display:flex;align-items:center;gap:10px}
+  .lang-card h5::before{content:"";width:24px;height:1px;background:var(--gold)}
+  .lang-bar{margin-bottom:20px}
+  .lang-bar:last-child{margin-bottom:0}
+  .lang-top{display:flex;justify-content:space-between;font-size:.92rem;margin-bottom:8px}
+  .lang-top em{font-style:normal;color:var(--ink-soft);font-size:.78rem;letter-spacing:.04em}
+  .bar{height:5px;background:var(--bg-alt);border-radius:99px;overflow:hidden}
+  .bar span{display:block;height:100%;background:linear-gradient(90deg,var(--gold-soft),var(--gold));border-radius:99px}
+
+  /* JOURNEY TIMELINE */
+  .journey{margin-top:6px}
+  .milestone{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:50px 0}
+  .milestone + .milestone{border-top:1px solid var(--line)}
+  .milestone.reverse .m-visual{order:2}
+  .m-photo{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:8px;border:1px solid var(--line);box-shadow:0 28px 56px -34px rgba(70,55,20,.55)}
+  .m-panel{aspect-ratio:16/10;border-radius:8px;border:1px solid var(--line);background:linear-gradient(150deg,var(--dark),#3f3a31);color:#f3ead6;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:40px;box-shadow:0 28px 56px -34px rgba(70,55,20,.55)}
+  .m-panel::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border:1px solid rgba(201,169,106,.25);border-radius:50%}
+  .m-panel::before{content:"";position:absolute;right:-30px;bottom:-90px;width:240px;height:240px;border:1px solid rgba(201,169,106,.15);border-radius:50%}
+  .m-panel .rn{font-family:var(--serif);font-size:3.4rem;color:var(--gold-soft);line-height:1;margin-bottom:14px}
+  .m-panel .pk{letter-spacing:.22em;text-transform:uppercase;font-size:.8rem;color:#e9dcc1}
+  .m-panel .pk2{font-family:var(--serif);font-size:1.5rem;margin-top:6px;color:#fff}
+  .m-year{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:12px}
+  .m-year::before{content:"";width:30px;height:1px;background:var(--gold)}
+  .m-body h3{font-family:var(--serif);font-size:1.9rem;font-weight:600;line-height:1.15;margin:14px 0 4px}
+  .m-where{font-size:.92rem;color:var(--ink-soft);margin-bottom:14px;letter-spacing:.02em}
+  .m-body p{color:var(--ink-soft);font-size:1rem;margin-bottom:18px}
+  .pills{display:flex;flex-wrap:wrap;gap:8px}
+  .pill{font-size:.72rem;padding:5px 12px;border:1px solid var(--line);border-radius:99px;color:var(--ink-soft);letter-spacing:.03em;background:var(--white)}
+  .m-links{display:flex;gap:18px;margin-top:18px;flex-wrap:wrap}
+  .m-links a{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:3px;transition:color .25s;display:inline-flex;align-items:center;gap:6px}
+  .m-links a:hover{color:var(--gold)}
+  .m-links a svg{width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:1.7}
+
+  /* EXPERTISE */
+  .exp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+  .exp-card{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:32px}
+  .exp-card h5{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+  .exp-card h5::before{content:"";width:24px;height:1px;background:var(--gold)}
+  .cert-list{display:flex;flex-direction:column;gap:0}
+  .cert{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+  .cert:last-child{border-bottom:none}
+  .cert b{font-weight:500}
+  .cert span{color:var(--gold);font-size:.82rem;letter-spacing:.04em;white-space:nowrap}
+  .edu-item{padding:14px 0;border-bottom:1px solid var(--line)}
+  .edu-item:last-child{border-bottom:none}
+  .edu-item .deg{font-family:var(--serif);font-size:1.2rem;font-weight:600}
+  .edu-item .sch{font-size:.9rem;color:var(--ink-soft)}
+  .edu-item .gpa{display:inline-flex;align-items:center;gap:7px;margin-top:9px;font-size:.82rem;color:var(--gold);letter-spacing:.04em;font-weight:500}
+  .edu-item .gpa::before{content:"";width:16px;height:1px;background:var(--gold)}
+  .edu-item .yr{font-size:.78rem;color:var(--gold);letter-spacing:.06em;float:right;margin-top:4px}
+
+  /* VIDEOS */
+  .video-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  .video-card{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:14px;transition:border-color .3s,box-shadow .3s}
+  .video-card:hover{border-color:var(--gold-soft);box-shadow:0 24px 48px -28px rgba(70,55,20,.4)}
+  .video-frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#0c0c0c}
+  .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .v-cap{font-size:.82rem;letter-spacing:.04em;color:var(--ink-soft);padding:14px 8px 6px;display:flex;align-items:center;gap:8px}
+  .v-cap::before{content:"";width:18px;height:1px;background:var(--gold)}
+
+  /* CONTACT */
+  .contact{text-align:center}
+  .contact .sec-head{margin:0 auto 36px}
+  .contact-big{font-family:var(--serif);font-style:italic;font-size:clamp(1.6rem,4vw,2.6rem);color:var(--ink);margin-bottom:36px;line-height:1.3}
+  .contact-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .c-link{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border:1px solid var(--line);border-radius:99px;font-size:.85rem;letter-spacing:.04em;transition:.25s;background:var(--white)}
+  .c-link:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px)}
+  .c-link svg{width:16px;height:16px;stroke:var(--gold)}
+  footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:var(--ink-soft);font-size:.8rem;letter-spacing:.05em}
+  footer .brand-sm{font-family:var(--serif);color:var(--ink);font-size:1rem}
+
+  [data-zh]{display:none}
+  html[lang="zh"] [data-en]{display:none}
+  html[lang="zh"] [data-zh]{display:revert}
+  html[lang="zh"]{font-feature-settings:"palt"}
+
+  @media(max-width:860px){
+    .hero-grid{grid-template-columns:1fr;gap:42px}
+    .portrait{max-width:300px;order:-1}
+    .story-grid,.exp-grid,.video-grid{grid-template-columns:1fr;gap:30px}
+    .milestone{grid-template-columns:1fr;gap:26px;padding:40px 0}
+    .milestone .m-visual{order:-1 !important}
+    .stats{grid-template-columns:1fr 1fr}
+    .nav-links{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:24px 28px;gap:20px;align-items:flex-start}
+    .nav-links.open{display:flex}
+    .menu-btn{display:block}
+    section{padding:66px 0}
+  }
+  @media(max-width:480px){.stats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">Michelle Tran<span class="dot">.</span></div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#story"   data-en>Story</a><a href="#story" data-zh>我的故事</a>
+      <a href="#journey" data-en>Journey</a><a href="#journey" data-zh>歷程</a>
+      <a href="#expertise" data-en>Expertise</a><a href="#expertise" data-zh>專長</a>
+      <a href="#videos"  data-en>Videos</a><a href="#videos" data-zh>影音</a>
+      <a href="#contact" data-en>Contact</a><a href="#contact" data-zh>聯絡</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:14px">
+      <div class="lang-toggle">
+        <button id="btnEn" class="active" onclick="setLang('en')">EN</button>
+        <button id="btnZh" onclick="setLang('zh')">繁中</button>
+      </div>
+      <button class="menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow" data-en>International Marketing &amp; Sales · AI Product Practitioner</div>
+        <div class="eyebrow" data-zh>國際行銷業務 · AI 產品實踐者</div>
+        <h1>
+          <span data-en>Michelle Tran</span><span data-zh>陳氏清花</span>
+          <span class="zh-name" data-en>陳氏清花</span><span class="zh-name" data-zh>Michelle Tran</span>
+        </h1>
+        <div class="role" data-en>A non-IT professional building the future with AI — turning market insight into products and growth.</div>
+        <div class="role" data-zh>用 AI 打造未來的非工程背景人才 —— 將市場洞察轉化為產品與成長。</div>
+        <p class="lead" data-en>A trilingual marketer (Vietnamese · English · Mandarin) and NCKU IMBA graduate. Startup founder, market researcher and AI builder — I bridge business operations with generative AI, and ship real products that solve real problems.</p>
+        <p class="lead" data-zh>三語行銷人（越 · 英 · 中）、成功大學 IMBA。創業者、市場研究者與 AI 實作者 —— 我以生成式 AI 連結商業營運，並打造解決真實問題的產品。</p>
+        <div class="hero-cta">
+          <a href="#journey" class="btn btn-primary" data-en>Explore My Journey</a>
+          <a href="#journey" class="btn btn-primary" data-zh>探索我的歷程</a>
+          <a href="#contact" class="btn btn-ghost" data-en>Get in Touch</a>
+          <a href="#contact" class="btn btn-ghost" data-zh>聯絡我</a>
+        </div>
+      </div>
+      <div class="portrait">
+        <img src="portrait.jpg" alt="Michelle Tran" class="portrait-img"
+             onerror="this.style.display='none';this.parentNode.querySelector('.initials').style.display='block';" />
+        <div class="initials" style="display:none">MT</div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="num">3</div><div class="lbl" data-en>Languages 中·EN·VI</div><div class="lbl" data-zh>三語 中·英·越</div></div>
+      <div class="stat"><div class="num">915</div><div class="lbl" data-en>TOEIC Score</div><div class="lbl" data-zh>多益成績</div></div>
+      <div class="stat"><div class="num">Top 10%</div><div class="lbl" data-en>NCKU IMBA Honor</div><div class="lbl" data-zh>成大IMBA傑出獎</div></div>
+      <div class="stat"><div class="num">2</div><div class="lbl" data-en>Global Competitions</div><div class="lbl" data-zh>國際商業競賽</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2 data-en>My Story</h2><h2 data-zh>我的故事</h2>
+    </div>
+    <div class="story-grid">
+      <div>
+        <p class="intro" data-en>"I grew up in Vietnam and chose to build my career across borders — where markets, cultures and languages meet."</p>
+        <p class="intro" data-zh>「我在越南長大，並選擇跨越國界打造職涯 —— 在市場、文化與語言交會之處。」</p>
+        <p data-en>Fluent in <strong>Vietnamese, English and Mandarin</strong>, I came to Taiwan for an International MBA at <strong>National Cheng Kung University</strong>, where I was honored as a Top 10% Outstanding Student. Along the way I founded a sustainable startup, represented my university on global stages, and shipped products that solve real business problems.</p>
+        <p data-en>Today I work in <strong>international marketing &amp; sales and market research</strong>, focused on the Vietnam market. What sets me apart: I'm a non-IT professional who <strong>builds with generative AI</strong> — using Claude and Gemini to prototype products, automate workflows and turn insight into working software. My mission is to be the bridge that helps brands grow between <strong>Southeast Asia and the world</strong>.</p>
+        <p data-zh>精通<strong>越南語、英語與中文</strong>，我來到台灣攻讀<strong>成功大學 IMBA</strong>，並榮獲前 10% 傑出學生獎。一路上，我創辦了永續品牌、代表學校站上國際舞台，也打造了解決真實商業問題的產品。</p>
+        <p data-zh>如今，我從事<strong>國際行銷業務與市場調研</strong>，專注越南市場。我的獨特之處：我是非工程背景，卻能<strong>用生成式 AI 打造產品</strong> —— 以 Claude 與 Gemini 製作產品原型、自動化流程，將洞察轉化為可運作的軟體。我的使命，是成為連結<strong>東南亞與世界</strong>、助品牌成長的橋樑。</p>
+      </div>
+      <div class="lang-card">
+        <h5 data-en>Language Proficiency</h5><h5 data-zh>語文能力</h5>
+        <div class="lang-bar">
+          <div class="lang-top"><span data-en>Vietnamese</span><span data-zh>越南文</span><em data-en>Native</em><em data-zh>母語</em></div>
+          <div class="bar"><span style="width:100%"></span></div>
+        </div>
+        <div class="lang-bar">
+          <div class="lang-top"><span data-en>English</span><span data-zh>英文</span><em data-en>Fluent · TOEIC 915</em><em data-zh>精通 · 多益 915</em></div>
+          <div class="bar"><span style="width:92%"></span></div>
+        </div>
+        <div class="lang-bar">
+          <div class="lang-top"><span data-en>Chinese — Listening 中文聽力</span><span data-zh>中文 · 聽力</span><em data-en>TOCFL Lvl 4 · B2</em><em data-zh>高階級 · B2</em></div>
+          <div class="bar"><span style="width:80%"></span></div>
+        </div>
+        <div class="lang-bar">
+          <div class="lang-top"><span data-en>Chinese — Reading 中文閱讀</span><span data-zh>中文 · 閱讀</span><em data-en>TOCFL Lvl 2 · A2</em><em data-zh>基礎級 · A2</em></div>
+          <div class="bar"><span style="width:45%"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey" class="alt">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="sec-num">02</span>
+      <h2 data-en>The Journey</h2><h2 data-zh>歷程</h2>
+      <p data-en>A path from Vietnam to Taiwan — education, entrepreneurship and the products I've built along the way.</p>
+      <p data-zh>從越南到台灣的旅程 —— 學業、創業，以及一路打造的產品。</p>
+    </div>
+
+    <div class="journey">
+
+      <!-- 1 Foundation -->
+      <div class="milestone">
+        <div class="m-visual">
+          <div class="m-panel">
+            <div class="rn">Ⅰ</div>
+            <div class="pk" data-en>The Foundation</div><div class="pk" data-zh>起點</div>
+            <div class="pk2" data-en>Vietnam</div><div class="pk2" data-zh>越南</div>
+          </div>
+        </div>
+        <div class="m-body">
+          <div class="m-year">2019 — 2023</div>
+          <h3 data-en>Where it began</h3><h3 data-zh>一切的開始</h3>
+          <div class="m-where" data-en>Bachelor of Economics · Tan Tao University, Vietnam</div>
+          <div class="m-where" data-zh>經濟學學士 · 越南 Tan Tao 大學</div>
+          <p data-en>I studied economics in a fully English-taught international program — and discovered I loved leading people. As Vice President of the Student Council and President of the Event Organization Club, I led 100+ peers to plan large-scale campus events.</p>
+          <p data-zh>我在全英語國際課程中修讀經濟學，也發現自己熱愛帶領團隊。擔任學生會副主席與活動社社長，帶領百人團隊籌辦大型校園活動。</p>
+          <div class="pills"><span class="pill" data-en>Economics</span><span class="pill" data-zh>經濟學</span><span class="pill" data-en>Leadership</span><span class="pill" data-zh>領導力</span><span class="pill" data-en>Event Planning</span><span class="pill" data-zh>活動企劃</span></div>
+        </div>
+      </div>
+
+      <!-- 2 TMA -->
+      <div class="milestone reverse">
+        <div class="m-visual">
+          <div class="m-panel">
+            <div class="rn">Ⅱ</div>
+            <div class="pk" data-en>First Insights</div><div class="pk" data-zh>初試市場</div>
+            <div class="pk2">TMA Solutions</div>
+          </div>
+        </div>
+        <div class="m-body">
+          <div class="m-year">2022</div>
+          <h3 data-en>Turning research into product</h3><h3 data-zh>把研究變成產品</h3>
+          <div class="m-where" data-en>Business Analyst Intern · TMA Solutions (Healthcare App)</div>
+          <div class="m-where" data-zh>商業分析實習生 · TMA Solutions（醫療健康 App）</div>
+          <p data-en>At one of Vietnam's leading software firms, I analyzed 10+ competitors and 100+ customer insights to optimize UX/UI, reviewed and reported 30+ bugs, and proposed 5+ new features — my first real taste of turning market research into product decisions.</p>
+          <p data-zh>在越南領先的軟體公司，我分析 10+ 競品與 100+ 用戶洞察以優化 UX/UI，審查並回報 30+ 錯誤、提出 5+ 新功能 —— 第一次真正將市場研究轉化為產品決策。</p>
+          <div class="pills"><span class="pill" data-en>Market Research</span><span class="pill" data-zh>市場研究</span><span class="pill">UX/UI</span><span class="pill" data-en>Agile</span><span class="pill" data-zh>敏捷開發</span></div>
+        </div>
+      </div>
+
+      <!-- 3 NCKU -->
+      <div class="milestone">
+        <div class="m-visual"><img class="m-photo" src="imba.jpg" alt="NCKU IMBA cohort" loading="lazy" /></div>
+        <div class="m-body">
+          <div class="m-year">2024</div>
+          <h3 data-en>Crossing borders to Taiwan</h3><h3 data-zh>跨越國界，來到台灣</h3>
+          <div class="m-where" data-en>International MBA · National Cheng Kung University (NCKU)</div>
+          <div class="m-where" data-zh>國際企管碩士 IMBA · 國立成功大學</div>
+          <p data-en>I moved to Taiwan to pursue my IMBA at NCKU, immersing myself in a multicultural classroom. I was awarded a <strong>Top 10% Outstanding Student</strong> honor — a 94.5/100 GPA and a perfect score in Entrepreneurship that set the stage for what came next.</p>
+          <p data-zh>我來到台灣攻讀成功大學 IMBA，沉浸於多元文化的學習環境。榮獲<strong>前 10% 傑出學生獎</strong> —— 學期成績 94.5/100、創業課程滿分，為日後的旅程奠定基礎。</p>
+          <div class="pills"><span class="pill">IMBA</span><span class="pill" data-en>Top 10% Honor</span><span class="pill" data-zh>前10%傑出獎</span><span class="pill" data-en>GPA 94.5</span><span class="pill" data-zh>總成績94.5</span></div>
+        </div>
+      </div>
+
+      <!-- 4 Hult -->
+      <div class="milestone reverse">
+        <div class="m-visual"><img class="m-photo" src="hult.jpg" alt="Hult Prize Taiwan — 2nd runner-up" loading="lazy" style="object-position:center 38%" /></div>
+        <div class="m-body">
+          <div class="m-year">2024 — 2025</div>
+          <h3 data-en>Becoming a founder</h3><h3 data-zh>成為創辦人</h3>
+          <div class="m-where" data-en>Founder &amp; CEO · Bio Beauty — Hult Prize 2025</div>
+          <div class="m-where" data-zh>創辦人暨執行長 · Bio Beauty — Hult Prize 2025</div>
+          <p data-en>I founded <strong>Bio Beauty</strong>, a B-Corp biotech haircare brand built on kombucha and the UN SDGs. Leading market research, business modeling and investor pitching, my team won <strong>3rd place</strong> at the NCKU campus round and reached the <strong>Top 19</strong> nationally among Taiwan's best.</p>
+          <p data-zh>我創辦了 <strong>Bio Beauty</strong> —— 以康普茶與聯合國 SDGs 為核心的 B-Corp 生技護髮品牌。主導市場調研、商業模式與投資簡報，團隊榮獲成大校內賽<strong>第三名</strong>，並進入台灣全國賽<strong>前 19 強</strong>。</p>
+          <div class="pills"><span class="pill" data-en>Entrepreneurship</span><span class="pill" data-zh>創業</span><span class="pill" data-en>Pitching</span><span class="pill" data-zh>商業簡報</span><span class="pill" data-en>Sustainability</span><span class="pill" data-zh>永續/SDGs</span></div>
+        </div>
+      </div>
+
+      <!-- 5 Career -->
+      <div class="milestone">
+        <div class="m-visual">
+          <div class="m-panel">
+            <div class="rn">Ⅴ</div>
+            <div class="pk" data-en>Bridging Markets</div><div class="pk" data-zh>連結市場</div>
+            <div class="pk2" data-en>Vietnam ⇆ Taiwan</div><div class="pk2" data-zh>越南 ⇆ 台灣</div>
+          </div>
+        </div>
+        <div class="m-body">
+          <div class="m-year" data-en>2025 — Present</div><div class="m-year" data-zh>2025 — 至今</div>
+          <h3 data-en>Bridging Vietnam &amp; Taiwan</h3><h3 data-zh>連結越南與台灣</h3>
+          <div class="m-where" data-en>Market Research &amp; Product Specialist · Chenyang Info</div>
+          <div class="m-where" data-zh>市場調研與產品專員 · 宸揚資科</div>
+          <p data-en>I own Vietnam market-entry strategy and deep user research — turning insights into product features alongside the R&amp;D team, running QA, building the lead pipeline, and sharpening competitive pricing and positioning.</p>
+          <p data-zh>我負責越南市場進入策略與用戶研究 —— 與研發團隊協作將洞察轉化為產品功能，並執行測試、建立客戶名單、優化競品定價與定位。</p>
+          <div class="pills"><span class="pill" data-en>Business Development</span><span class="pill" data-zh>商業開發</span><span class="pill" data-en>Market Entry</span><span class="pill" data-zh>市場進入</span><span class="pill" data-en>Competitive Analysis</span><span class="pill" data-zh>競品分析</span></div>
+        </div>
+      </div>
+
+      <!-- 6 L'Oreal -->
+      <div class="milestone reverse">
+        <div class="m-visual"><img class="m-photo" src="loreal.jpg" alt="L'Oréal Brandstorm 2026 Certificate" loading="lazy" /></div>
+        <div class="m-body">
+          <div class="m-year">2026</div>
+          <h3 data-en>On the global stage</h3><h3 data-zh>站上國際舞台</h3>
+          <div class="m-where" data-en>NCKU Representative · L'Oréal Brandstorm 2026</div>
+          <div class="m-where" data-zh>成大代表隊 · L'Oréal Brandstorm 2026</div>
+          <p data-en>I represented NCKU among <strong>152 teams</strong> in L'Oréal's global Brandstorm competition with a <strong>Biotech Fragrance</strong> concept — translating sustainability into a commercially viable product and pitching it to industry judges.</p>
+          <p data-zh>於萊雅集團全球 Brandstorm 競賽中，自 <strong>152 支隊伍</strong>脫穎而出代表成大出賽，以<strong>生物科技香水</strong>概念將永續轉化為具商業潛力的產品，並向業界評審簡報。</p>
+          <div class="pills"><span class="pill" data-en>Beauty-Tech</span><span class="pill" data-zh>美妝科技</span><span class="pill" data-en>Market Strategy</span><span class="pill" data-zh>市場策略</span><span class="pill" data-en>Innovation</span><span class="pill" data-zh>創新</span></div>
+        </div>
+      </div>
+
+      <!-- 7 ProTrack -->
+      <div class="milestone">
+        <div class="m-visual"><img class="m-photo" src="protrack.png" alt="ProTrack system" loading="lazy" /></div>
+        <div class="m-body">
+          <div class="m-year" data-en>2026 — Present</div><div class="m-year" data-zh>2026 — 至今</div>
+          <h3 data-en>Building my own solution</h3><h3 data-zh>打造自己的解決方案</h3>
+          <div class="m-where" data-en>AI Product Builder · ProTrack &amp; HeyMimi</div>
+          <div class="m-where" data-zh>AI 產品開發 · ProTrack 與 HeyMimi</div>
+          <p data-en>As a non-IT marketer, I design and ship real software with <strong>generative AI</strong>. <strong>ProTrack</strong> is a full-stack, bilingual (中/越) project &amp; time-management system (React · TypeScript · Vite · Gemini API) that replaced a Taiwanese manufacturer's paper-and-Excel workflow — with a full project pipeline, color-coded time logging, role-based access and one-click Excel reports. I'm also building <strong>HeyMimi</strong>, an AI-powered app on Gemini &amp; Firebase.</p>
+          <p data-zh>身為非工程背景的行銷人，我以<strong>生成式 AI</strong> 設計並上線真實軟體。<strong>ProTrack</strong> 是全端雙語（中／越）專案與工時管理系統（React · TypeScript · Vite · Gemini API），為台灣某製造商取代紙本與 Excel 流程 —— 含完整專案狀態流程、色彩工時登錄、權限管理與一鍵 Excel 報表。我同時開發 <strong>HeyMimi</strong>，一款基於 Gemini 與 Firebase 的 AI 應用。</p>
+          <div class="pills"><span class="pill">React</span><span class="pill">TypeScript</span><span class="pill">Vite</span><span class="pill">Gemini API</span><span class="pill">Firebase</span></div>
+          <div class="m-links">
+            <a href="https://michelle-tw.github.io/Zheng-Yi-Tech/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              <span data-en>Live Demo</span><span data-zh>線上展示</span>
+            </a>
+            <a href="https://github.com/michelle-tw" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <h2 data-en>Expertise &amp; Recognition</h2><h2 data-zh>專長與認證</h2>
+      <p data-en>The skills, tools and credentials behind the work.</p>
+      <p data-zh>支撐這些成果的技能、工具與資歷。</p>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card">
+        <h5 data-en>Marketing &amp; Business</h5><h5 data-zh>行銷與商業</h5>
+        <div class="pills">
+          <span class="pill">Market Research</span><span class="pill">Marketing &amp; Sales</span>
+          <span class="pill">Business Development</span><span class="pill">Competitive Analysis</span>
+          <span class="pill">Pitching</span><span class="pill">Workflow Automation</span>
+          <span class="pill">Cross-Cultural Comms</span>
+        </div>
+        <h5 style="margin-top:28px" data-en>AI &amp; Tech</h5><h5 style="margin-top:28px" data-zh>AI 與技術</h5>
+        <div class="pills">
+          <span class="pill">Prompt Engineering</span><span class="pill">Claude</span><span class="pill">Gemini</span>
+          <span class="pill">AI-Assisted Full-Stack</span><span class="pill">Chatbot / Automation</span>
+          <span class="pill">React · TypeScript</span><span class="pill">Firebase</span><span class="pill">Git / GitHub</span>
+          <span class="pill">Stata</span><span class="pill">MS Office 2024</span>
+        </div>
+      </div>
+      <div class="exp-card">
+        <h5 data-en>Education</h5><h5 data-zh>學歷</h5>
+        <div class="edu-item">
+          <span class="yr">2024 – 2026</span>
+          <div class="deg" data-en>Master, International MBA</div><div class="deg" data-zh>國際企管碩士 IMBA</div>
+          <div class="sch" data-en>National Cheng Kung University, Taiwan</div><div class="sch" data-zh>國立成功大學</div>
+          <div class="gpa">GPA 4.25 / 4.30</div>
+        </div>
+        <div class="edu-item">
+          <span class="yr">2019 – 2023</span>
+          <div class="deg" data-en>Bachelor, Economics</div><div class="deg" data-zh>經濟學學士</div>
+          <div class="sch" data-en>Tan Tao University, Vietnam</div><div class="sch" data-zh>Tan Tao University（越南）</div>
+          <div class="gpa">GPA 3.82 / 4.00</div>
+        </div>
+        <h5 style="margin-top:26px" data-en>Certifications</h5><h5 style="margin-top:26px" data-zh>資格認證</h5>
+        <div class="cert-list">
+          <div class="cert"><b>TOEIC</b><span>915 · ETS</span></div>
+          <div class="cert" style="flex-wrap:wrap;gap:3px 14px"><b data-en>TOCFL · Listening 聽力</b><b data-zh>華語文檢定 · 聽力</b><span data-en>570/700 · Level 4 · CEFR B2</span><span data-zh>570/700 · 高階級 · B2</span></div>
+          <div class="cert" style="flex-wrap:wrap;gap:3px 14px"><b data-en>TOCFL · Reading 閱讀</b><b data-zh>華語文檢定 · 閱讀</b><span data-en>465/700 · Level 2 · CEFR A2</span><span data-zh>465/700 · 基礎級 · A2</span></div>
+          <div class="cert"><b>Data Analytics Essentials</b><span>IBM</span></div>
+          <div class="cert"><b>Financial Markets</b><span>Yale</span></div>
+          <div class="cert"><b>Brand Management</b><span>Univ. of London</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <h2 data-en>Video Showcase</h2><h2 data-zh>影音作品</h2>
+      <p data-en>Pitches and project highlights — watch right here, no need to leave the page.</p>
+      <p data-zh>簡報與專案精華 —— 可直接於本頁觀看，無需跳轉。</p>
+    </div>
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/amxPo7mgklw?rel=0" title="Video 1" loading="lazy" allowfullscreen allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+        <div class="v-cap" data-en>Featured video — 01</div><div class="v-cap" data-zh>精選影片 — 01</div>
+      </div>
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/VbGL-PUKcxM?rel=0" title="Video 2" loading="lazy" allowfullscreen allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+        <div class="v-cap" data-en>Featured video — 02</div><div class="v-cap" data-zh>精選影片 — 02</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="sec-num">05</span>
+      <h2 data-en>Let's Connect</h2><h2 data-zh>聯絡我</h2>
+    </div>
+    <p class="contact-big" data-en>"Bridging Vietnam &amp; international markets — let's build something that grows."</p>
+    <p class="contact-big" data-zh>「連結越南與國際市場 —— 讓我們一起創造成長。」</p>
+    <div class="contact-links">
+      <a class="c-link" href="mailto:thanhhoa.tran10062001@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        thanhhoa.tran10062001@gmail.com
+      </a>
+      <a class="c-link" href="https://www.linkedin.com/in/hoa-tranthithanh/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 17v-7"/></svg>
+        LinkedIn
+      </a>
+      <a class="c-link" href="https://github.com/michelle-tw" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+      <a class="c-link" href="https://pda.104.com.tw/profile/edit?vno=76ev20oo4" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+        <span data-en>104 Resume</span><span data-zh>104 履歷</span>
+      </a>
+      <a class="c-link" href="https://maps.google.com/?q=Tainan,Taiwan" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span data-en>Tainan, Taiwan</span><span data-zh>台灣 · 台南</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand-sm">Michelle Tran · 陳氏清花</div>
+    <div style="margin-top:8px" data-en>Business Development &amp; Market Research · © 2026</div>
+    <div style="margin-top:8px" data-zh>商業開發與市場調研 · © 2026</div>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    document.getElementById('btnEn').classList.toggle('active', lang==='en');
+    document.getElementById('btnZh').classList.toggle('active', lang==='zh');
+    try{ localStorage.setItem('portfolio-lang', lang); }catch(e){}
+  }
+  try{ var saved = localStorage.getItem('portfolio-lang'); if(saved){ setLang(saved); } }catch(e){}
+  document.querySelectorAll('#navLinks a').forEach(function(a){
+    a.addEventListener('click', function(){ document.getElementById('navLinks').classList.remove('open'); });
+  });
+</script>
+</body>
+</html>
