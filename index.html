@@ -148,6 +148,26 @@
   .thesis .th-sub{font-size:.78rem;color:var(--gold);letter-spacing:.03em;margin:5px 0 10px}
   .thesis .th-desc{font-size:.9rem;color:var(--ink-soft);margin-bottom:13px;line-height:1.6}
 
+  /* CERT MARQUEE */
+  .cert-strip{margin-top:34px}
+  .cert-strip .lbl{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;text-align:center;margin-bottom:20px}
+  .cert-marquee{position:relative;overflow:hidden;padding:6px 0;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+    mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%)}
+  .cert-track{display:flex;width:max-content;animation:certscroll 60s linear infinite}
+  .cert-marquee:hover .cert-track{animation-play-state:paused}
+  @keyframes certscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .cert-item{flex:none;width:218px;height:152px;margin-right:20px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px;
+    display:flex;align-items:center;justify-content:center;box-shadow:0 14px 30px -22px rgba(70,55,20,.5);
+    transition:transform .25s,box-shadow .25s,border-color .25s}
+  .cert-item:hover{transform:translateY(-5px);border-color:var(--gold-soft);box-shadow:0 24px 44px -24px rgba(70,55,20,.6)}
+  .cert-item img{max-width:100%;max-height:100%;width:auto;height:auto;display:block;border-radius:3px;object-fit:contain}
+  @media(prefers-reduced-motion:reduce){
+    .cert-marquee{mask-image:none;-webkit-mask-image:none;overflow-x:auto}
+    .cert-track{animation:none}
+  }
+  @media(max-width:860px){.cert-item{width:170px;height:120px}}
+
   /* PRESS */
   .press{margin-top:38px}
   .press h5{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:10px;color:var(--ink)}
@@ -496,6 +516,40 @@
           <div class="cert"><b>Data Analytics Essentials</b><span>IBM</span></div>
           <div class="cert"><b>Financial Markets</b><span>Yale</span></div>
           <div class="cert"><b>Brand Management</b><span>Univ. of London</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-strip">
+      <div class="lbl" data-en>13 Certificates · Tap to view</div><div class="lbl" data-zh>13 張證照 · 點擊查看</div>
+      <div class="cert-marquee">
+        <div class="cert-track">
+          <a class="cert-item" href="certs/toeic.pdf" target="_blank" rel="noopener"><img src="certs/toeic.jpg" alt="TOEIC 915 Certificate" loading="lazy" /></a>
+          <a class="cert-item" href="certs/business-analyst.pdf" target="_blank" rel="noopener"><img src="certs/business-analyst.jpg" alt="Business Analyst Certificate" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-4.pdf" target="_blank" rel="noopener"><img src="certs/coursera-4.jpg" alt="Yale — Financial Markets (Coursera)" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-8.pdf" target="_blank" rel="noopener"><img src="certs/coursera-8.jpg" alt="University of London — Brand Management (Coursera)" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-7.pdf" target="_blank" rel="noopener"><img src="certs/coursera-7.jpg" alt="University of Michigan (Coursera)" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-2.pdf" target="_blank" rel="noopener"><img src="certs/coursera-2.jpg" alt="École Polytechnique — Scientific Writing (Coursera)" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-3.pdf" target="_blank" rel="noopener"><img src="certs/coursera-3.jpg" alt="NCKU Certificate (Coursera)" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-6.pdf" target="_blank" rel="noopener"><img src="certs/coursera-6.jpg" alt="NCKU Certificate (Coursera)" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-1.pdf" target="_blank" rel="noopener"><img src="certs/coursera-1.jpg" alt="Coursera Certificate" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-5.pdf" target="_blank" rel="noopener"><img src="certs/coursera-5.jpg" alt="Coursera Certificate" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-9.pdf" target="_blank" rel="noopener"><img src="certs/coursera-9.jpg" alt="Coursera Certificate" loading="lazy" /></a>
+          <a class="cert-item" href="certs/tantao-1.pdf" target="_blank" rel="noopener"><img src="certs/tantao-1.jpg" alt="Tan Tao University Certificate" loading="lazy" /></a>
+          <a class="cert-item" href="certs/tantao-2.pdf" target="_blank" rel="noopener"><img src="certs/tantao-2.jpg" alt="Tan Tao University Certificate" loading="lazy" /></a>
+          <a class="cert-item" href="certs/toeic.pdf" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="certs/toeic.jpg" alt="" loading="lazy" /></a>
+          <a class="cert-item" href="certs/business-analyst.pdf" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="certs/business-analyst.jpg" alt="" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-4.pdf" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="certs/coursera-4.jpg" alt="" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-8.pdf" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="certs/coursera-8.jpg" alt="" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-7.pdf" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="certs/coursera-7.jpg" alt="" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-2.pdf" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="certs/coursera-2.jpg" alt="" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-3.pdf" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="certs/coursera-3.jpg" alt="" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-6.pdf" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="certs/coursera-6.jpg" alt="" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-1.pdf" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="certs/coursera-1.jpg" alt="" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-5.pdf" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="certs/coursera-5.jpg" alt="" loading="lazy" /></a>
+          <a class="cert-item" href="certs/coursera-9.pdf" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="certs/coursera-9.jpg" alt="" loading="lazy" /></a>
+          <a class="cert-item" href="certs/tantao-1.pdf" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="certs/tantao-1.jpg" alt="" loading="lazy" /></a>
+          <a class="cert-item" href="certs/tantao-2.pdf" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="certs/tantao-2.jpg" alt="" loading="lazy" /></a>
         </div>
       </div>
     </div>
