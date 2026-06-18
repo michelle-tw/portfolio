@@ -40,7 +40,7 @@
   .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
 
   /* prevent awkward orphan line-breaks */
-  h1,h2,h3,.sec-head p,.hero .role,.story-grid p.intro,.contact-big,.m-where,.v-cap,.lbl{text-wrap:balance}
+  h1,h2,h3,.eyebrow,.sec-head p,.hero .role,.story-grid p.intro,.contact-big,.m-where,.v-cap,.lbl{text-wrap:balance}
   p,.lead,.summary,.th-desc{text-wrap:pretty}
 
   /* NAV */
@@ -207,10 +207,13 @@
   [data-zh]{display:none}
   html[lang="zh"] [data-en]{display:none}
   html[lang="zh"] [data-zh]{display:revert}
-  /* fix: card h5 headings use display:flex which out-specifies the toggle — hide off-language heading explicitly */
+  /* fix: elements with a higher-specificity display rule out-specify the [data-zh] toggle — hide off-language copy explicitly */
   .exp-card h5[data-zh],.lang-card h5[data-zh],.press h5[data-zh]{display:none}
   html[lang="zh"] .exp-card h5[data-en],html[lang="zh"] .lang-card h5[data-en],html[lang="zh"] .press h5[data-en]{display:none}
   html[lang="zh"] .exp-card h5[data-zh],html[lang="zh"] .lang-card h5[data-zh],html[lang="zh"] .press h5[data-zh]{display:flex}
+  .hero h1 .zh-name[data-zh]{display:none}
+  html[lang="zh"] .hero h1 .zh-name[data-en]{display:none}
+  html[lang="zh"] .hero h1 .zh-name[data-zh]{display:block}
   html[lang="zh"]{font-feature-settings:"palt"}
 
   @media(max-width:860px){
@@ -255,7 +258,7 @@
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <div class="eyebrow" data-en>International Marketing · Consumer Insight · Brand Strategy</div>
+        <div class="eyebrow" data-en>International&nbsp;Marketing · Consumer&nbsp;Insight · Brand&nbsp;Strategy</div>
         <div class="eyebrow" data-zh>國際行銷 · 消費者洞察 · 品牌策略</div>
         <h1>
           <span data-en>Michelle Tran</span><span data-zh>陳氏清花</span>
