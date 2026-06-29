@@ -687,12 +687,18 @@
     try{ localStorage.setItem('portfolio-lang', lang); }catch(e){}
   }
   try{ var saved = localStorage.getItem('portfolio-lang'); if(saved){ setLang(saved); } }catch(e){}
-  fetch('https://api.counterapi.dev/v1/michelle-tw-portfolio/page/up')
-    .then(function(r){return r.json()})
-    .then(function(d){var el=document.getElementById('visitNum');if(el)el.textContent=Number(d.count).toLocaleString()})
-    .catch(function(){});
-  // Visit tracker
+  fetch('https://xvcmatgygkraofodjujf.supabase.co/rest/v1/visits?select=*',{
+    method:'HEAD',
+    headers:{'apikey':'sb_publishable_y_h6FDw2LhPOsIqCsS_rDw_4xRF1yis','Authorization':'Bearer sb_publishable_y_h6FDw2LhPOsIqCsS_rDw_4xRF1yis','Prefer':'count=exact'}
+  }).then(function(r){
+    var range=r.headers.get('Content-Range');
+    var count=range?parseInt(range.split('/')[1]):0;
+    var el=document.getElementById('visitNum');
+    if(el&&count>0)el.textContent=count.toLocaleString();
+  }).catch(function(){});
+  // Visit tracker — skip if this browser has admin access
   (function(){
+    if(localStorage.getItem('mtw_ph')) return;
     var SB='https://xvcmatgygkraofodjujf.supabase.co';
     var SK='sb_publishable_y_h6FDw2LhPOsIqCsS_rDw_4xRF1yis';
     var t0=Date.now(), maxS=0, sections=[], geo={};
