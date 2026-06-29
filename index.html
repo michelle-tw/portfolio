@@ -203,8 +203,7 @@
   .c-link svg{width:16px;height:16px;stroke:var(--gold)}
   footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:var(--ink-soft);font-size:.8rem;letter-spacing:.05em}
   footer .brand-sm{font-family:var(--serif);color:var(--ink);font-size:1rem}
-  .visit-count{margin-top:16px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);opacity:.7}
-  .visit-count img{height:18px;border-radius:3px}
+  .nav-counter{height:20px;border-radius:3px;opacity:.85}
 
   [data-zh]{display:none}
   html[lang="zh"] [data-en]{display:none}
@@ -246,6 +245,7 @@
       <a href="#contact" data-en>Contact</a><a href="#contact" data-zh>聯絡</a>
     </nav>
     <div style="display:flex;align-items:center;gap:14px">
+      <img class="nav-counter" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fmichelle-tw.github.io%2Fportfolio%2F&count_bg=%23b08d4f&title_bg=%231c1b19&icon=eye&icon_color=%23ffffff&title=visitors&edge_flat=true" alt="visitor count" />
       <div class="lang-toggle">
         <button id="btnEn" class="active" onclick="setLang('en')">EN</button>
         <button id="btnZh" onclick="setLang('zh')">繁中</button>
@@ -672,9 +672,6 @@
     <div class="brand-sm">Michelle Tran · 陳氏清花</div>
     <div style="margin-top:8px" data-en>International Marketing &amp; Consumer Insight · © 2026</div>
     <div style="margin-top:8px" data-zh>國際行銷與消費者洞察 · © 2026</div>
-    <div class="visit-count">
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fmichelle-tw.github.io%2Fportfolio%2F&count_bg=%23b08d4f&title_bg=%231c1b19&icon=eye&icon_color=%23ffffff&title=visitors&edge_flat=true" alt="visitor count" />
-    </div>
   </div>
 </footer>
 
