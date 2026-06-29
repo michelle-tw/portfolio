@@ -691,6 +691,38 @@
     .then(function(r){return r.json()})
     .then(function(d){var el=document.getElementById('visitNum');if(el)el.textContent=Number(d.count).toLocaleString()})
     .catch(function(){});
+  // Visit tracker
+  (function(){
+    var SB='https://xvcmatgygkraofodjujf.supabase.co';
+    var SK='sb_publishable_y_h6FDw2LhPOsIqCsS_rDw_4xRF1yis';
+    var t0=Date.now(), maxS=0, sections=[], geo={};
+    var SECS=['story','journey','expertise','videos','contact'];
+    fetch('https://api.ipify.org?format=json').then(function(r){return r.json();}).then(function(d){
+      geo.ip=d.ip;
+      return fetch('https://ip-api.com/json/'+d.ip+'?fields=city,country,regionName,timezone');
+    }).then(function(r){return r.json();}).then(function(g){
+      geo.city=g.city; geo.country=g.country; geo.region_name=g.regionName; geo.timezone=g.timezone;
+    }).catch(function(){});
+    window.addEventListener('scroll',function(){
+      var pct=Math.round(window.scrollY/Math.max(1,document.body.scrollHeight-window.innerHeight)*100);
+      if(pct>maxS) maxS=Math.min(pct,100);
+      SECS.forEach(function(id){
+        if(sections.indexOf(id)<0){var el=document.getElementById(id);
+          if(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight&&r.bottom>0)sections.push(id);}}
+      });
+    },{passive:true});
+    var sent=false;
+    function send(){
+      if(sent)return; sent=true;
+      fetch(SB+'/rest/v1/visits',{method:'POST',keepalive:true,
+        headers:{'Content-Type':'application/json','apikey':SK,'Authorization':'Bearer '+SK,'Prefer':'return=minimal'},
+        body:JSON.stringify(Object.assign({referrer:document.referrer||'direct',user_agent:navigator.userAgent,
+          scroll_depth:maxS,time_on_page:Math.round((Date.now()-t0)/1000),sections_viewed:sections},geo))
+      }).catch(function(){});
+    }
+    window.addEventListener('beforeunload',send);
+    window.addEventListener('pagehide',send);
+  })();
   document.querySelectorAll('#navLinks a').forEach(function(a){
     a.addEventListener('click', function(){ document.getElementById('navLinks').classList.remove('open'); });
   });
