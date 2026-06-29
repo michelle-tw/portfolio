@@ -203,7 +203,8 @@
   .c-link svg{width:16px;height:16px;stroke:var(--gold)}
   footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:var(--ink-soft);font-size:.8rem;letter-spacing:.05em}
   footer .brand-sm{font-family:var(--serif);color:var(--ink);font-size:1rem}
-  .nav-counter{height:20px;border-radius:3px;opacity:.85}
+  .nav-counter{display:flex;align-items:center;gap:5px;font-size:.72rem;color:var(--ink-soft);letter-spacing:.06em;border:1px solid var(--line);border-radius:999px;padding:5px 11px;white-space:nowrap}
+  .nav-counter svg{color:var(--gold);flex-shrink:0}
 
   [data-zh]{display:none}
   html[lang="zh"] [data-en]{display:none}
@@ -245,7 +246,10 @@
       <a href="#contact" data-en>Contact</a><a href="#contact" data-zh>聯絡</a>
     </nav>
     <div style="display:flex;align-items:center;gap:14px">
-      <img class="nav-counter" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fmichelle-tw.github.io%2Fportfolio%2F&count_bg=%23b08d4f&title_bg=%231c1b19&icon=eye&icon_color=%23ffffff&title=visitors&edge_flat=true" alt="visitor count" />
+      <span class="nav-counter" id="navCounter">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span id="visitNum">—</span>
+      </span>
       <div class="lang-toggle">
         <button id="btnEn" class="active" onclick="setLang('en')">EN</button>
         <button id="btnZh" onclick="setLang('zh')">繁中</button>
@@ -683,6 +687,10 @@
     try{ localStorage.setItem('portfolio-lang', lang); }catch(e){}
   }
   try{ var saved = localStorage.getItem('portfolio-lang'); if(saved){ setLang(saved); } }catch(e){}
+  fetch('https://api.counterapi.dev/v1/michelle-tw-portfolio/page/up')
+    .then(function(r){return r.json()})
+    .then(function(d){var el=document.getElementById('visitNum');if(el)el.textContent=Number(d.count).toLocaleString()})
+    .catch(function(){});
   document.querySelectorAll('#navLinks a').forEach(function(a){
     a.addEventListener('click', function(){ document.getElementById('navLinks').classList.remove('open'); });
   });
