@@ -699,9 +699,9 @@
     var SECS=['story','journey','expertise','videos','contact'];
     fetch('https://api.ipify.org?format=json').then(function(r){return r.json();}).then(function(d){
       geo.ip=d.ip;
-      return fetch('https://ip-api.com/json/'+d.ip+'?fields=city,country,regionName,timezone');
+      return fetch('https://ipapi.co/'+d.ip+'/json/');
     }).then(function(r){return r.json();}).then(function(g){
-      geo.city=g.city; geo.country=g.country; geo.region_name=g.regionName; geo.timezone=g.timezone;
+      geo.city=g.city; geo.country=g.country_name; geo.region_name=g.region; geo.timezone=g.timezone;
     }).catch(function(){});
     window.addEventListener('scroll',function(){
       var pct=Math.round(window.scrollY/Math.max(1,document.body.scrollHeight-window.innerHeight)*100);
